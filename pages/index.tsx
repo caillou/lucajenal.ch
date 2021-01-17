@@ -16,7 +16,7 @@ const projects = [
     Vorstudie: true,
   },
   {
-    title: 'Gebäudebegrünungskonzept',
+    title: 'Gebäude&shy;begrünungskonzept',
     subtitle: 'Gebäudebegrünungskonzept für eine Zwischennutzung ',
     module: 'Modul Gebäudebegrünung ',
     tags: ['low-tech', 'low-budget', 'low-maintenance'],
@@ -77,19 +77,18 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <h1>Luca Jenal</h1>
+      <main className="max-w-md mx-auto px-4">
+        {/* <h1 className="text-4xl mt-16 mb-8">Luca Jenal</h1> */}
 
         {projects.map((project) => {
           return (
-            <div key="{project.folder}">
-              <h2>{project.title}</h2>
-              <ul
-                style={{
-                  listStyle: 'none',
-                  padding: 0,
-                }}
-              >
+            <div className="my-24" key="{project.folder}">
+              <p className="text-xs px-8">Projekt</p>
+              <h2
+                className="text-4xl my-2"
+                dangerouslySetInnerHTML={{ __html: project.title }}
+              ></h2>
+              <ul className="text-base  px-8">
                 {['Konzept', 'Poster', 'Arbeit', 'Vorstudie']
                   .filter((type) => (project as any)[type])
                   .map((type) => (
