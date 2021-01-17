@@ -3,10 +3,10 @@ import Head from 'next/head'
 const projects = [
   {
     title: 'Steinfabrikareal 2.0',
-    subtitle: 'Gestaltung eines brachliegenden Areals ',
-    module: 'Modul Planung und Bauprozesse',
-    description: 'Interdisziplinäre Gruppenarbeit IUNR',
-    tags: ['Natur erleben', 'Wandel erleben'],
+    subtitle: 'Gestaltung eines brachliegenden Areals',
+    module: 'Modul Planung und Bauprozesse',
+    description: 'Interdisziplinäre Gruppenarbeit IUNR',
+    tags: ['erleben', 'Natur', 'Wandel'],
     folder: '01-Steinfabrikareal',
     videos: true,
     images: 1,
@@ -17,8 +17,8 @@ const projects = [
   },
   {
     title: 'Gebäude&shy;begrünungskonzept',
-    subtitle: 'Gebäudebegrünungskonzept für eine Zwischennutzung ',
-    module: 'Modul Gebäudebegrünung ',
+    subtitle: 'Gebäudebegrünungskonzept für eine Zwischennutzung',
+    module: 'Modul Gebäudebegrünung',
     tags: ['low-tech', 'low-budget', 'low-maintenance'],
     folder: '02-Gebäudebegrünung',
     videos: false,
@@ -29,7 +29,7 @@ const projects = [
   {
     title: 'Natürliche Stadtrundfahrten Basel',
     subtitle: 'Konzeptentwicklung Festival der Natur Basel Stadtnatur entdecken',
-    module: 'Modul Biodiversität im Siedlungsraum ',
+    module: 'Modul Biodiversität im Siedlungsraum',
     tags: ['zuhören', 'wahrnehmen', 'weitererzählen'],
     folder: '03-Basel',
     videos: false,
@@ -38,20 +38,20 @@ const projects = [
     Konzept: true,
   },
   {
-    title: 'Arboretum Zürich ',
-    subtitle: 'Analyse und Empfehlung Weiterentwicklung Bereich Oststaaten USA Kanada ',
-    module: 'Modul Urban Forestry ',
-    tags: ['Baumbeurteilung ', 'Sanierung', 'Konzept '],
+    title: 'Arboretum Zürich',
+    subtitle: 'Analyse und Empfehlung Weiterentwicklung Bereich Oststaaten USA Kanada',
+    module: 'Modul Urban Forestry',
+    tags: ['Baumbeurteilung', 'Sanierung', 'Konzept'],
     folder: '04-Arboretum',
     videos: false,
     images: 3,
     Arbeit: true,
   },
   {
-    title: 'Animal Aided Design ',
+    title: 'Animal Aided Design',
     subtitle: 'Förderung Wasserfledermaus Zürich in Verbindung mit Architektur',
-    module: 'Modul urbane Ökosysteme ',
-    tags: ['Design', 'Naturschutz ', 'Wasserfledermaus'],
+    module: 'Modul urbane Ökosysteme',
+    tags: ['Design', 'Naturschutz', 'Wasserfledermaus'],
     folder: '05-ADD',
     videos: false,
     images: 1,
@@ -59,8 +59,8 @@ const projects = [
   },
   {
     title: 'Bachelorarbeit',
-    subtitle: 'Zwischennatur ',
-    module: 'ökologische Chancen einer Zwischennutzung ',
+    subtitle: 'Zwischennatur',
+    module: 'ökologische Chancen einer Zwischennutzung',
     folder: '06-BA',
     videos: false,
     images: 1,
@@ -83,12 +83,21 @@ export default function Home() {
         {projects.map((project) => {
           return (
             <div className="my-24" key="{project.folder}">
-              <p className="text-xs px-8">Projekt</p>
+              {project.tags && (
+                <ul className="text-xs px-8">
+                  {project.tags.map((tag) => (
+                    <li className="inline-block mr-1 tag" key={project.folder + 'tag' + tag}>
+                      {tag.toLocaleLowerCase().replace(' ', '-')}
+                    </li>
+                  ))}
+                </ul>
+              )}
+
               <h2
                 className="text-4xl my-2"
                 dangerouslySetInnerHTML={{ __html: project.title }}
               ></h2>
-              <ul className="text-base  px-8">
+              <ul className="text-base px-8">
                 {['Konzept', 'Poster', 'Arbeit', 'Vorstudie']
                   .filter((type) => (project as any)[type])
                   .map((type) => (

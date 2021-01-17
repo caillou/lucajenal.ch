@@ -46,7 +46,15 @@ a::before {
   bottom: 0.05em;
   height: 0.15em;
   left: 0;
-  right: 0;
+  width: 100%;
   background-color: #ffd94a;
   z-index: -1;
+}
+
+a:hover::before {
+  height: 0.95em;
+}
+
+.tag::before {
+  content: '#';
 }
