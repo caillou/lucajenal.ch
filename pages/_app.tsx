@@ -2,7 +2,7 @@ import { ElementType } from 'react'
 import '../styles/globals.css'
 
 type AppParameter<P> = {
-  Component: ElementType,
+  Component: ElementType
   pageProps: P
 }
 

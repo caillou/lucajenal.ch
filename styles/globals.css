@@ -2,9 +2,11 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: noe-display-medium, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-weight: 200;
+  background-color: rgb(245, 244, 244);
+  color: rgb(21, 47, 78);
 }
 
 a {
@@ -22,4 +24,13 @@ a {
   src: url('/fonts/noe-display-medium-v11/noe-display-medium-v11.woff') format('woff');
   font-weight: 300;
   font-style: normal;
+}
+
+h1 {
+  font-family: noe-display-medium;
+  font-weight: normal;
+}
+
+h2 {
+  font-weight: 200;
 }
