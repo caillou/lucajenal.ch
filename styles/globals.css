@@ -67,7 +67,7 @@ a:hover::before {
   position: fixed;
   top: 0;
   left: 0;
-  transform: translate(-8%, 0) rotate(270deg) translate(-54%, 0);
+  transform: translate(-8%, 0) rotate(270deg) translate(-65%, 0);
 }
 
 .luca {
