@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Image from 'next/image'
 
 const projects = [
   {
@@ -16,7 +17,7 @@ const projects = [
     Vorstudie: true,
   },
   {
-    title: 'Gebäude&shy;begrünungskonzept',
+    title: 'Gebäude&shy;begrünungs&shy;konzept',
     subtitle: 'Gebäudebegrünungskonzept für eine Zwischennutzung',
     module: 'Modul Gebäudebegrünung',
     tags: ['low-tech', 'low-budget', 'low-maintenance'],
@@ -52,7 +53,7 @@ const projects = [
     subtitle: 'Förderung Wasserfledermaus Zürich in Verbindung mit Architektur',
     module: 'Modul urbane Ökosysteme',
     tags: ['Design', 'Naturschutz', 'Wasserfledermaus'],
-    folder: '05-ADD',
+    folder: '05-AAD',
     videos: false,
     images: 1,
     Konzept: true,
@@ -60,7 +61,7 @@ const projects = [
   {
     title: 'Bachelorarbeit',
     subtitle: 'Zwischennatur',
-    module: 'ökologische Chancen einer Zwischennutzung',
+    module: 'Ökologische Chancen einer Zwischennutzung',
     folder: '06-BA',
     videos: false,
     images: 1,
@@ -76,15 +77,25 @@ export default function Home() {
         <title>Luca Jenal</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      <div className="ml-12">
+        <Image
+          src="/images/luca-chair.jpg"
+          width="960"
+          height="1280"
+          alt="Picture of the author"
+          layout="responsive"
+        />
+      </div>
       <main className="max-w-lg mx-auto px-4">
         {/* <h1 className="text-4xl mt-16 mb-8">Luca Jenal</h1> */}
-
+        {/* <h1 className="luca text-4xl">Luca Jenal</h1> */}
+        <h1 className="luca text-4xl pt-1 pr-3">Luca Jenal</h1>
+        <h2 className="portfolio">Portfolio</h2>
         {projects.map((project) => {
           return (
             <div className="my-24" key="{project.folder}">
               {project.tags && (
-                <ul className="text-xs px-8">
+                <ul className="text-xs pl-8">
                   {project.tags.map((tag) => (
                     <li className="inline-block mr-1 tag" key={project.folder + 'tag' + tag}>
                       {tag.toLocaleLowerCase().replace(' ', '-')}
@@ -93,12 +104,14 @@ export default function Home() {
                 </ul>
               )}
 
-              <h2
+              <h3
                 className="text-4xl my-2"
                 dangerouslySetInnerHTML={{ __html: project.title }}
-              ></h2>
-              <ul className="text-base px-8">
-                {['Konzept', 'Poster', 'Arbeit', 'Vorstudie']
+              ></h3>
+              <p className="pl-8 my-2">{project.subtitle}</p>
+              <p className="pl-8 my-2">{project.module}</p>
+              <ul className="text-base pl-8">
+                {['Konzept', 'Vorstudie', 'Arbeit', 'Poster']
                   .filter((type) => (project as any)[type])
                   .map((type) => (
                     <li key={type}>

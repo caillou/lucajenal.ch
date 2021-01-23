@@ -26,9 +26,13 @@ body {
 }
 
 h1,
-h2 {
+h3 {
   font-family: noe-display-medium;
   font-weight: normal;
+  position: relative;
+  z-index: 1;
+  background-color: rgb(245, 244, 244);
+  transform: translate3d(1px, 0, 0);
 }
 
 /* h2 {
@@ -57,4 +61,17 @@ a:hover::before {
 
 .tag::before {
   content: '#';
+}
+
+.portfolio {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-8%, 0) rotate(270deg) translate(-54%, 0);
+}
+
+.luca {
+  position: absolute;
+  background-color: rgb(245, 244, 244);
+  top: 50vh;
 }
