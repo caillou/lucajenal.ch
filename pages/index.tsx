@@ -77,7 +77,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="max-w-md mx-auto px-4">
+      <main className="max-w-lg mx-auto px-4">
         {/* <h1 className="text-4xl mt-16 mb-8">Luca Jenal</h1> */}
 
         {projects.map((project) => {
