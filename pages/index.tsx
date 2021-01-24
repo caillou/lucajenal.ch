@@ -77,7 +77,7 @@ export default function Home() {
         <title>Luca Jenal</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="ml-12">
+      <div className="pl-12 max-w-lg mx-auto">
         <Image
           src="/images/luca-chair.jpg"
           width="960"
