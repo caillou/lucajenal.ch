@@ -87,8 +87,6 @@ export default function Home() {
         />
       </div>
       <main className="max-w-lg mx-auto px-4">
-        {/* <h1 className="text-4xl mt-16 mb-8">Luca Jenal</h1> */}
-        {/* <h1 className="luca text-4xl">Luca Jenal</h1> */}
         <h1 className="luca text-4xl pt-1 pr-3">Luca Jenal</h1>
         <h2 className="portfolio">Portfolio</h2>
         {projects.map((project) => {
