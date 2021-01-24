@@ -82,14 +82,14 @@ a:hover::before {
 }
 
 .portfolio {
-  position: fixed;
-  top: 0;
-  left: 0;
-  transform: translate(-7%, 0) rotate(270deg) translate(-65%, 0);
+  transform-origin: top left;
+  transform: rotate(270deg) translate(-100%, 0);
+  padding-right: 1.5rem;
+  line-height: 3rem;
 }
 
 .luca {
   position: absolute;
   background-color: rgb(245, 244, 244);
-  top: 50vh;
+  top: 75%;
 }

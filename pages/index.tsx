@@ -77,18 +77,22 @@ export default function Home() {
         <title>Luca Jenal</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="pl-12 max-w-lg mx-auto">
-        <Image
-          src="/images/luca-chair.jpg"
-          width="960"
-          height="1280"
-          alt="Picture of the author"
-          layout="responsive"
-        />
+      <div className="max-w-lg mx-auto relative">
+        <h1 className="luca pl-4 text-4xl pt-1 pr-3">Luca Jenal</h1>
+        <h2>
+          <div className="fixed top-0 portfolio">Portfolio</div>
+        </h2>
+        <div className="pl-12">
+          <Image
+            src="/images/luca-chair.jpg"
+            width="960"
+            height="1280"
+            alt="Picture of the author"
+            layout="responsive"
+          />
+        </div>
       </div>
       <main className="max-w-lg mx-auto px-4">
-        <h1 className="luca text-4xl pt-1 pr-3">Luca Jenal</h1>
-        <h2 className="portfolio">Portfolio</h2>
         {projects.map((project) => {
           return (
             <div className="my-24" key="{project.folder}">
