@@ -89,6 +89,8 @@ export default function Home() {
             height="1280"
             alt="Picture of the author"
             layout="responsive"
+            loading="eager"
+            priority
           />
         </div>
       </div>
