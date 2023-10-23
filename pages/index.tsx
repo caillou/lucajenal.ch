@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const projects = [
   {
@@ -9,12 +10,12 @@ const projects = [
     description: 'Interdisziplinäre Gruppenarbeit IUNR',
     tags: ['erleben', 'Natur', 'Wandel'],
     folder: '01-Steinfabrikareal',
-    videos: true,
+    videos: false,
     images: 1,
-    Konzept: true,
-    Poster: true,
+    Konzept: false,
+    Poster: false,
     Arbeit: false,
-    Vorstudie: true,
+    Vorstudie: false,
   },
   {
     title: 'Gebäude&shy;begrünungs&shy;konzept',
@@ -24,8 +25,8 @@ const projects = [
     folder: '02-Gebäudebegrünung',
     videos: false,
     images: 2,
-    Konzept: true,
-    Poster: true,
+    Konzept: false,
+    Poster: false,
   },
   {
     title: 'Natürliche Stadtrundfahrten Basel',
@@ -36,7 +37,7 @@ const projects = [
     videos: false,
     images: 1,
     audio: 3,
-    Konzept: true,
+    Konzept: false,
   },
   {
     title: 'Arboretum Zürich',
@@ -46,7 +47,7 @@ const projects = [
     folder: '04-Arboretum',
     videos: false,
     images: 3,
-    Arbeit: true,
+    Arbeit: false,
   },
   {
     title: 'Animal Aided Design',
@@ -56,7 +57,7 @@ const projects = [
     folder: '05-AAD',
     videos: false,
     images: 1,
-    Konzept: true,
+    Konzept: false,
   },
   {
     title: 'Bachelorarbeit',
@@ -65,8 +66,8 @@ const projects = [
     folder: '06-BA',
     videos: false,
     images: 1,
-    Poster: true,
-    Arbeit: true,
+    Poster: false,
+    Arbeit: false,
   },
 ]
 
@@ -78,7 +79,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="max-w-lg mx-auto relative">
-        <h1 className="luca pl-4 text-4xl pt-1 pr-3">Luca Jenal</h1>
+        <h1 className="luca pl-4 text-4xl pt-1 pr-3">Luca Jenal </h1>
         <h2>
           <div className="fixed top-0 portfolio">Portfolio</div>
         </h2>
